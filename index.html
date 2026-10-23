@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clima Claro</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<main>
+ <header><span class="brand">CLIMA CLARO <span class="dot"></span></span><span class="tag">Tu día, sin sorpresas</span></header>
+ <section class="intro"><p class="eyebrow">UN VISTAZO AL CIELO</p><h1>¿Cómo estará<br>tu próximo día?</h1><p>Busca una ciudad y consulta el clima actual y el pronóstico de los próximos cinco días.</p></section>
+ <form id="search" novalidate><label for="city">¿Dónde quieres consultar el clima?</label><div class="search-row"><input id="city" name="city" autocomplete="address-level2" placeholder="Ej. Mérida, México" minlength="2" maxlength="100" required><button id="submit" type="submit">Buscar ciudad</button></div></form>
+ <p id="status" role="status" aria-live="polite">Empieza buscando una ciudad.</p>
+ <section id="choices" hidden aria-label="Ciudades encontradas"><h2>Elige tu ciudad</h2><div id="choice-list"></div></section>
+ <section id="weather" hidden aria-label="Resultado del clima"><div class="weather-head"><div><p class="eyebrow">AHORA EN</p><h2 id="place"></h2><p id="updated"></p></div><span class="sun" aria-hidden="true">☀</span></div><div class="conditions"><div><span id="temperature" class="temperature"></span><p id="description"></p></div><div class="metrics"><div>Sensación térmica<strong id="feels"></strong></div><div>Humedad<strong id="humidity"></strong></div><div>Viento<strong id="wind"></strong></div></div></div><h3>Los próximos cinco días</h3><div id="forecast" class="forecast"></div></section>
+ <footer><span>Hecho para mirar hacia afuera.</span><a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Datos de Open-Meteo · CC BY 4.0</a></footer>
+</main><script type="module" src="app.js"></script>
+</body></html>
